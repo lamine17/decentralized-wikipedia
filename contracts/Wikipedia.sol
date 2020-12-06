@@ -24,4 +24,10 @@ contract Wikipedia {
   }
 
   // Write your code here.
+  
+  function addArticle(string memory content, uint id) public {
+    ids.push(id);
+    Article memory newArticle = Article(content);
+    articlesById[id] = newArticle;
+  }
 }
